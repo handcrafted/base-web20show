@@ -1,0 +1,101 @@
+@import base
+
+body
+  +font-sans
+
+=centered
+  margin: 0 auto
+  width: 1000px  
+
+#nav_main .inner, #body, #footer .inner
+  +centered
+  
+#footer
+  background: #000
+  height: 500px
+
+#header
+  +nav_main
+  background: #000
+  border-bottom: 5px solid #e1e1e1
+  margin-bottom: 45px
+  #branding
+    +gradient("linear", "0% 0%, 0% 85%", #3d3d3d, #151515)
+    h1, p
+      background: url(/wp-content/themes/base/images/web20show_logo.png) no-repeat
+      height: 90px
+      margin: 0 auto
+      position: relative
+      text-indent: -9999px
+      width: 411px
+      a
+        display: block
+        height: 100%
+        position: absolute
+        width: 100%
+
+#body
+  +clearfix
+  margin-bottom: 25px
+  #content
+    +float-left
+    width: 575px
+  #sidebar
+    +float-right
+    width: 385px
+    ul
+      +no-bullets
+
+#content
+  +crunchbase
+
+#featured
+  .post
+    +clearfix
+    border-bottom: 4px solid #e5e5e5
+    margin-bottom: 25px
+    padding-bottom: 25px
+    .sidebar
+      +float-left
+      margin-top: 26px
+      width: 80px
+      .episode
+        text-align: center
+        span
+          display: block
+          font-weight: bold
+          &.label
+            font-size: 17px
+            margin-bottom: 3px
+          &.data
+            // font-size: 46px
+            font-size: 60px
+    .content
+      +float-right
+      width: 480px
+      h2
+        font-size: 24px
+        font-weight: bold
+        line-height: 1.2
+        margin-bottom: 18px
+        a
+          color: #000
+          text-decoration: none
+          &:hover
+            text-decoration: underline
+      h3
+        font-size: 14px
+        margin-bottom: 10px
+      p
+        font-size: 14px
+        line-height: 1.5
+        margin-bottom: 18px
+        &:last-child
+          margin-bottom: 0
+        &.continued
+          a
+            color: #000
+            font-weight: bold
+            text-decoration: none
+            &:hover
+              text-decoration: underline

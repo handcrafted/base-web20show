@@ -1,0 +1,4 @@
+--- 
+theme: kubrick
+ssh_user: you@yourdomain.com
+remote_root: ~/domains/yourdomain.com/html

@@ -1,0 +1,39 @@
+=current
+  background: url(/wp-content/themes/base/images/nav_main_current.png) repeat-x 0 50%
+  color: #000
+
+=active
+  background: url(/wp-content/themes/base/images/nav_main_active.png) repeat-x 0 50%
+  color: #fff
+
+=nav_main
+  #nav_main
+    +font-sans
+    background: #0d0d0d
+    border-top: 1px solid #333
+    padding-top: 4px
+    .inner
+      +clearfix
+    ul, li, a
+      +float-left
+      li
+        font-size: 12px
+        font-weight: bold
+        text-transform: capitalize
+        margin-right: 1px
+        &:last-child
+          margin-right: 0
+        a
+          background: url(/wp-content/themes/base/images/nav_main_inactive.png) repeat-x 0 50%
+          color: #fff
+          display: block
+          line-height: 36px
+          text-align: center
+          text-decoration: none
+          width: 199px
+          &.current, &:hover
+            +current
+          &:active, &:focus
+            +active
+            &:hover
+              +active
