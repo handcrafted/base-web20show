@@ -4,6 +4,7 @@
 
 // Import extensions
 @import extensions/border_radius
+@import extensions/last_child
 @import extensions/css3/gradient
 
 // Import partials
@@ -12,3 +13,13 @@
 
 =font-sans
   font-family: Helvetica, Arial, sans-serif
+
+// Links
+a
+  color: #000
+  &:hover
+    color: #000
+    text-decoration: none
+  &:focus,
+  &:active
+    outline: none

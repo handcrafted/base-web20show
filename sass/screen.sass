@@ -5,7 +5,7 @@ body
 
 =centered
   margin: 0 auto
-  width: 1000px  
+  width: 1000px
 
 #nav_main .inner, #body, #footer .inner
   +centered
@@ -46,9 +46,65 @@ body
     ul
       +no-bullets
 
+#sidebar
+  #subscribe
+    +clearfix
+    margin-bottom: 35px
+    ul, li
+      +float-left
+    li, li a
+      line-height: 32px
+    li
+      margin-right: 7px
+      text-indent: -99999px
+      &:last-child
+        margin-right: 0
+      &.label
+        background: url(/wp-content/themes/base/images/subscribe_to_the_show.png) no-repeat 50%
+        margin-right: 25px
+        width: 177px
+      a
+        background-repeat: no-repeat
+        background-position: 50%
+        display: block
+        width: 32px
+        &.feed
+          background-image: url(/wp-content/themes/base/images/feed_icon.png)
+        &.itunes
+          background-image: url(/wp-content/themes/base/images/itunes_icon.png)
+        &.twitter
+          background-image: url(/wp-content/themes/base/images/twitter_icon.png)
+        &.facebook
+          background-image: url(/wp-content/themes/base/images/facebook_icon.png)
+  #sponsors
+    ul
+      background: url(/wp-content/themes/base/images/show_sponsors.png) no-repeat
+      li
+        text-indent: -99999px
+        &.premium
+          background: url(/wp-content/themes/base/images/grasshopper_logo.png) no-repeat 50% 0
+          line-height: 84px
+          margin-bottom: 15px
+          width: 100%
+          a
+            display: block
+            height: 100%
+            width: 100%
+          
+
 #content
   +crunchbase
 
+#sidebar
+  #sponsors
+    ul
+      text-align: center
+      li
+        &.premium
+          display: block
+        &.standard
+          display: inline
+        
 #featured
   .post
     +clearfix

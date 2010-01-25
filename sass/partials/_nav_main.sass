@@ -1,9 +1,15 @@
 =current
-  background: url(/wp-content/themes/base/images/nav_main_current.png) repeat-x 0 50%
+  background-color: #fff
+  background-image: url(/wp-content/themes/base/images/nav_main_current.png)
+  border-top-color: #fff
   color: #000
 
 =active
-  background: url(/wp-content/themes/base/images/nav_main_active.png) repeat-x 0 50%
+  background-color: #A5A5A5
+  background-image: url(/wp-content/themes/base/images/nav_main_active.png)
+  background-position: 0 top
+  border-top: none
+  border-bottom-color: #000
   color: #fff
 
 =nav_main
@@ -11,7 +17,7 @@
     +font-sans
     background: #0d0d0d
     border-top: 1px solid #333
-    padding-top: 4px
+    padding-top: 6px
     .inner
       +clearfix
     ul, li, a
@@ -24,7 +30,12 @@
         &:last-child
           margin-right: 0
         a
-          background: url(/wp-content/themes/base/images/nav_main_inactive.png) repeat-x 0 50%
+          background-image: url(/wp-content/themes/base/images/nav_main_inactive.png)
+          background-repeat: repeat-x
+          background-position: 0 bottom
+          border-top-width: 3px
+          border-top-color: transparent
+          border-top-style: solid
           color: #fff
           display: block
           line-height: 36px
