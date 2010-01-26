@@ -9,7 +9,13 @@
 
 	<head profile="http://gmpg.org/xfn/11">
 		<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
-		<title><?php wp_title('-', true, 'right'); ?> <?php bloginfo('name'); ?></title>
+		<title>
+		  <?php if ( is_home()) { ?>
+		    <?php bloginfo('name'); ?> - Profiling the Entrepreneurs, Businesses and Technologies of Web 2.0
+      <?php } else { ?>
+		    <?php wp_title('-', true, 'right'); ?> <?php bloginfo('name'); ?>
+      <?php } ?>
+		</title>
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/print.css" type="text/css" media="print" />
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
