@@ -11,16 +11,17 @@ body
   +centered
   
 #footer
-  background: #000
-  height: 500px
+  background: #171717
+  border-top: 4px solid #ccc
+  height: 250px
 
 #header
   +nav_main
-  background: #000
-  border-bottom: 5px solid #e1e1e1
+  border-bottom: 1px solid #cacaca
   margin-bottom: 45px
   #branding
-    +gradient("linear", "0% 0%, 0% 85%", #3d3d3d, #151515)
+    background: #171717
+    +gradient("linear", "0% 0%, 0% 70%", #333, #171717)
     h1, p
       background: url(/wp-content/themes/base/images/web20show_logo.png) no-repeat
       height: 90px
@@ -47,21 +48,23 @@ body
       +no-bullets
 
 #sidebar
+  & > ul
+    display: none
   #subscribe
     +clearfix
-    margin-bottom: 35px
+    margin-bottom: 40px
     ul, li
       +float-left
     li, li a
       line-height: 32px
     li
-      margin-right: 7px
+      margin-right: 5px
       text-indent: -99999px
       &:last-child
         margin-right: 0
       &.label
         background: url(/wp-content/themes/base/images/subscribe_to_the_show.png) no-repeat 50%
-        margin-right: 25px
+        margin-right: 16px
         width: 177px
       a
         background-repeat: no-repeat
@@ -76,36 +79,115 @@ body
           background-image: url(/wp-content/themes/base/images/twitter_icon.png)
         &.facebook
           background-image: url(/wp-content/themes/base/images/facebook_icon.png)
+        &.delicious
+          background-image: url(/wp-content/themes/base/images/delicious_icon.png)
   #sponsors
+    margin-bottom: 25px
     ul
       background: url(/wp-content/themes/base/images/show_sponsors.png) no-repeat
-      li
-        text-indent: -99999px
-        &.premium
-          background: url(/wp-content/themes/base/images/grasshopper_logo.png) no-repeat 50% 0
-          line-height: 84px
-          margin-bottom: 15px
-          width: 100%
-          a
-            display: block
-            height: 100%
-            width: 100%
-          
-
-#content
-  +crunchbase
-
-#sidebar
-  #sponsors
-    ul
       text-align: center
       li
+        display: inline
         &.premium
           display: block
+          margin-bottom: 15px
         &.standard
-          display: inline
-        
-#featured
+          margin-right: 15px
+          &:last-child
+            margin-right: 0
+  #recently
+    +border-radius("3px")
+    background: #ebebeb
+    border: 1px solid #cecece
+    .header
+      background: url(/wp-content/themes/base/images/recently_header.png) repeat-x 0 50%
+      border-bottom: 1px solid #cecece
+      text-indent: -99999px
+      h2
+        background: url(/wp-content/themes/base/images/pitch_the_show_1_888_web20show.png) no-repeat 50%
+        line-height: 40px
+    ul
+      padding: 25px 15px
+      li
+        border-bottom: 1px solid #cecece
+        border-top: 1px solid #f8f8f8
+        padding-top: 15px
+        padding-bottom: 15px
+        &:first-child
+          border-top: none
+          padding-top: 0
+        &:last-child
+          border-bottom: none
+          margin-bottom: 0
+          padding-bottom: 0
+        .post
+          +clearfix
+          .sidebar
+            +float-left
+            width: 60px
+            .episode
+              text-align: center
+              span
+                display: block
+                font-weight: bold
+                &.label
+                  font-size: 11px
+                  font-weight: normal
+                  margin-bottom: 3px
+                &.data
+                  font-size: 32px
+            .tweetmeme_retweet
+              padding-top: 20px
+              text-align: center
+          .content
+            +float-right
+            width: 275px
+            h3
+              font-size: 14px
+              font-weight: normal
+              line-height: 1.2
+              a
+                color: #000
+                text-decoration: none
+                &:hover
+                  text-decoration: underline
+
+#content #main .post
+  +crunchbase
+
+#main
+  .page
+    h1
+      font-size: 24px
+      font-weight: bold
+      line-height: 1.2
+      margin-bottom: 18px
+    p
+      font-size: 14px
+      line-height: 1.5
+      margin-bottom: 18px
+      &:last-child
+        margin-bottom: 0
+  & .archives
+    ul
+      +clearfix
+      border-top: 4px solid #e5e5e5
+      margin-top: 15px
+      padding-top: 15px
+      li
+        +float-left
+        border-bottom: 1px solid #e5e5e5
+        font-size: 12px
+        width: 50%
+        margin-bottom: 8px
+        padding-bottom: 8px
+        overflow: hidden
+        a
+          text-decoration: none
+          &:hover
+            text-decoration: underline
+  #respond
+    display: none
   .post
     +clearfix
     border-bottom: 4px solid #e5e5e5
@@ -121,37 +203,63 @@ body
           display: block
           font-weight: bold
           &.label
-            font-size: 17px
+            font-size: 16px
+            font-weight: normal
             margin-bottom: 3px
           &.data
-            // font-size: 46px
             font-size: 60px
+      .tweetmeme_retweet
+        padding-top: 20px
+        text-align: center
     .content
       +float-right
       width: 480px
-      h2
-        font-size: 24px
-        font-weight: bold
-        line-height: 1.2
-        margin-bottom: 18px
-        a
-          color: #000
-          text-decoration: none
-          &:hover
-            text-decoration: underline
-      h3
-        font-size: 14px
-        margin-bottom: 10px
+      +audio_player
       p
         font-size: 14px
         line-height: 1.5
         margin-bottom: 18px
         &:last-child
           margin-bottom: 0
-        &.continued
-          a
-            color: #000
-            font-weight: bold
-            text-decoration: none
-            &:hover
-              text-decoration: underline
+        a
+          color: #000
+          font-weight: bold
+          text-decoration: none
+          &:hover
+            text-decoration: underline
+
+body.home #main .post .content
+  h2
+    font-size: 24px
+    font-weight: bold
+    line-height: 1.2
+    margin-bottom: 18px
+    a
+      color: #000
+      text-decoration: none
+      &:hover
+        text-decoration: underline
+  h3
+    color: #777
+    font-size: 16px
+    font-family: Times, "Times New Roman", serif
+    font-style: oblique
+    margin-bottom: 10px
+
+body.single #main .post .content
+  h1
+    font-size: 24px
+    font-weight: bold
+    line-height: 1.2
+    margin-bottom: 18px
+    a
+      color: #000
+      text-decoration: none
+      &:hover
+        text-decoration: underline
+  h2
+    color: #777
+    font-size: 16px
+    font-family: Times, "Times New Roman", serif
+    font-style: oblique
+    margin-bottom: 10px

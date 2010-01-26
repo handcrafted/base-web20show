@@ -7,55 +7,56 @@
 get_header();
 ?>
 
-	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+<div id="body">
 
-		<?php previous_post_link('&laquo; %link') ?> | <?php next_post_link('%link &raquo;') ?>
+  <!-- start #content -->
+  <div id="content">
+    
+    <!-- start #main -->
+    <div id="main">
 
-		<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
-			<h2><?php the_title(); ?></h2>
-			<?php the_content('<p>Read the rest of this entry &raquo;</p>'); ?>
-			<?php wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
-			<?php the_tags( '<p>Tags: ', ', ', '</p>'); ?>
+      <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-			<p>
-				
-				This entry was posted
-				<?php /* This is commented, because it requires a little adjusting sometimes.
-				You'll need to download this plugin, and follow the instructions:
-				http://binarybonsai.com/wordpress/time-since/ */
-				/* $entry_datetime = abs(strtotime($post->post_date) - (60*120)); echo time_since($entry_datetime); echo ' ago'; */ ?>
-				on <?php the_time('l, F jS, Y') ?> at <?php the_time() ?>
-				and is filed under <?php the_category(', ') ?>.
-				You can follow any responses to this entry through the <?php post_comments_feed_link('RSS 2.0'); ?> feed.
+  		<!-- <?php previous_post_link('&laquo; %link') ?> | <?php next_post_link('%link &raquo;') ?> -->
 
-				<?php if ( comments_open() && pings_open() ) {
-				// Both Comments and Pings are open ?>
-				You can <a href="#respond">leave a response</a>, or <a href="<?php trackback_url(); ?>" rel="trackback">trackback</a> from your own site.
+  		<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
+        <div class="sidebar">
+          <div class="episode">
+            <span class="label">Episode</span>
+            <span class="data"><?php get_custom_field_value('episode', true); ?></span>
+          </div>
+          <div class="tweetmeme_retweet">
+            <script type="text/javascript">
+              tweetmeme_url = '<?php the_permalink() ?>';
+            </script>
+            <script type="text/javascript" src="http://tweetmeme.com/i/scripts/button.js"></script>
+          </div>
+        </div>
+      
+        <div class="content">
+          <h2><?php get_custom_field_value('the_guests', true); ?></h2>
+          <h1><?php get_custom_field_value('the_long_title', true); ?></h1>
+          <?php the_content(); ?>
+        </div>
+  		</div>
 
-				<?php } elseif ( !comments_open() && pings_open() ) {
-				// Only Pings are Open ?>
-				Responses are currently closed, but you can <a href="<?php trackback_url(); ?> " rel="trackback">trackback</a> from your own site.
+      <?php comments_template(); ?>
 
-				<?php } elseif ( comments_open() && !pings_open() ) {
-				// Comments are open, Pings are not ?>
-				You can skip to the end and leave a response. Pinging is currently not allowed.
+      <?php endwhile; else: ?>
 
-				<?php } elseif ( !comments_open() && !pings_open() ) {
-				// Neither Comments, nor Pings are open ?>
-				Both comments and pings are currently closed.
+      <p>Sorry, no posts matched your criteria.</p>
 
-				<?php } edit_post_link('Edit this entry','','.'); ?>
+      <?php endif; ?>
 
-			</p>
-				
-		</div>
+    </div>
+    <!-- end #main -->
 
-	<?php comments_template(); ?>
+  </div>
+  <!-- end #content -->
+  
+  <div id="sidebar">
+    <?php get_sidebar(); ?>
+  </div>
 
-	<?php endwhile; else: ?>
-
-		<p>Sorry, no posts matched your criteria.</p>
-
-<?php endif; ?>
-
+</div>
 <?php get_footer(); ?>

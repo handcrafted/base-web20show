@@ -33,11 +33,12 @@
         <div id="nav_main">
           <div class="inner">
             <ul>
-              <li><a href="#" class="current">Home</a></li>
-              <li><a href="#">Archives</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Schedule</a></li>
-              <li><a href="#">Advertise</a></li>
+              <li><a href="<?php bloginfo('url'); ?>" class="current">Home</a></li>
+              <li><a href="<?php bloginfo('url'); ?>/archives/">Archives</a></li>
+              <li><a href="<?php bloginfo('url'); ?>/about/">About</a></li>
+              <li><a href="<?php bloginfo('url'); ?>/pitch/">Pitch the Show</a></li>
+              <li><a href="<?php bloginfo('url'); ?>/schedule/">Schedule</a></li>
+              <li><a href="<?php bloginfo('url'); ?>/advertising/">Advertise</a></li>
             </ul>
           </div>
         </div>

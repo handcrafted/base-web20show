@@ -9,16 +9,37 @@ Template Name: Archives
 ?>
 
 <?php get_header(); ?>
-<?php get_search_form(); ?>
 
-<h2>Archives by Month:</h2>
-<ul>
-	<?php wp_get_archives('type=monthly'); ?>
-</ul>
+<div id="body">
 
-<h2>Archives by Subject:</h2>
-<ul>
-	 <?php wp_list_categories(); ?>
-</ul>
+  <!-- start #content -->
+  <div id="content">
+    
+    <!-- start #main -->
+    <div id="main">
+        
+  		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+  		
+      <!-- start .page -->
+      <div id="post-<?php the_ID(); ?>" class="page archives">
+  		
+  			<h1><?php the_title(); ?></h1>
+  			<?php the_content(); ?>
 
+      </div>
+      <!-- end .page -->
+  		
+  		<?php endwhile; endif; ?>
+
+    </div>
+    <!-- end #main -->
+
+  </div>
+  <!-- end #content -->
+  
+  <div id="sidebar">
+    <?php get_sidebar(); ?>
+  </div>
+
+</div>
 <?php get_footer(); ?>

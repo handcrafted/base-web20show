@@ -8,45 +8,45 @@ get_header(); ?>
 
 <div id="body">
 
+  <!-- start #content -->
   <div id="content">
     
-    <?php include(TEMPLATEPATH . '/_featured_post.php'); ?>
-    
-    <?php if (have_posts()) : ?>
+    <!-- start #main -->
+    <div id="main">
+
+      <?php query_posts('category_name=podcast&posts_per_page=3'); ?>
 
     	<?php while (have_posts()) : the_post(); ?>
 
     		<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
-    			<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-    			<div class="meta_data">
-            <div class="episode_details">
-              <p>
-                <span class="label">Episode</span>
-                <span class="value"><?php if ( function_exists('get_custom_field_value') ){ get_custom_field_value('episode', true); } ?></span>
-              </p>
-              <p><?php the_time('F jS, Y') ?></p>
+          <div class="sidebar">
+            <div class="episode">
+              <span class="label">Episode</span>
+              <span class="data"><?php get_custom_field_value('episode', true); ?></span>
             </div>
-    			</div>
-          <div class="post_excerpt">
-            <?php the_excerpt(); ?>
+            <div class="tweetmeme_retweet">
+              <script type="text/javascript">
+                tweetmeme_url = '<?php the_permalink() ?>';
+              </script>
+              <script type="text/javascript" src="http://tweetmeme.com/i/scripts/button.js"></script>
+            </div>
           </div>
-    			<div class="post_content">
-    			 <?php the_content('Read the rest of this entry &raquo;'); ?>
-    			</div>
+          
+          <div class="content">
+            <h3><?php get_custom_field_value('the_guests', true); ?></h3>
+            <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php  the_title_attribute(); ?>"><?php get_custom_field_value('the_long_title', true); ?></a></h2>
+            <?php the_excerpt(); ?>
+            <p class="continued"><a href="<?php the_permalink() ?>" title="Permanent Link to <?php  the_title_attribute(); ?>">Read more and listen to this episode &rarr;</a></p>
+          </div>
     		</div>
 
     	<?php endwhile; ?>
 
-    	<?php next_posts_link('&laquo; Older Entries') ?> | <?php previous_posts_link('Newer Entries &raquo;') ?>
+    </div>
+    <!-- end #main -->
 
-    <?php else : ?>
-
-    	<h2>Not Found</h2>
-    	<p>Sorry, but you are looking for something that isn't here.</p>
-    	<?php get_search_form(); ?>
-
-    <?php endif; ?>
   </div>
+  <!-- end #content -->
   
   <div id="sidebar">
     <?php get_sidebar(); ?>
