@@ -1,0 +1,109 @@
+=pitch-the-show
+  .pitch-the-show
+    .gist
+      // background: #fff url(/wp-content/themes/base/images/bg_ffffff_f1f1f1_vertical.png) repeat-x 0 bottom
+      border: 1px solid #d7d7d7
+      padding: 25px 0 40px 0
+      position: relative
+      img
+        &.gary_corner
+          position: absolute
+          bottom: 0
+          left: -37px
+        &.speech_sliver
+          position: absolute
+          bottom: 90px
+          left: 145px
+          z-index: 20
+      .tweet_it
+        +border-radius("6px")
+        position: absolute
+        bottom: 115px
+        left: 110px
+        background: #f5f5f5 url(/wp-content/themes/base/images/gary_message.png) no-repeat 50%
+        border: 1px solid #d7d7d7
+        height: 150px
+        width: 260px
+        z-index: 30
+      .header
+        border-bottom: 1px solid #c1c1c1
+        margin: 0 auto
+        padding-bottom: 25px
+        margin-bottom: 25px
+        text-align: center
+        width: 870px
+        h1
+          font-size: 38px
+          font-weight: bold
+          line-height: 1
+          letter-spacing: -1px
+          margin-bottom: 20px
+        h2
+          background: url(/wp-content/themes/base/images/get_started_by_calling.png) no-repeat 50%
+          line-height: 31px
+          text-indent: -9999px
+      .body
+        +clearfix
+        .sidebar
+          +float-left
+          height: 400px
+          margin-left: 65px
+          padding-top: 25px
+          text-align: center
+          width: 300px
+          img
+            margin-bottom: 75px
+          h3
+            background: url(/wp-content/themes/base/images/power_by_grasshopper_text.png) no-repeat 50%
+            line-height: 129px
+            margin: 0 auto
+            text-indent: -9999px
+            width: 271px
+            a
+              display: block
+              height: 100%
+              width: 100%
+        .content
+          +float-right
+          margin-right: 65px
+          width: 520px
+          h2
+            font-size: 22px
+            font-weight: bold
+            margin-bottom: 10px
+            margin-top: 30px
+            &:first-child
+              margin-top: 0
+            &:last-child
+              margin-bottom: 0
+          p
+            +font-georgia
+            font-size: 16px
+            line-height: 1.5
+            margin-bottom: 18px
+            &:last-child
+              margin-bottom: 0
+          a
+            &.button,
+            &.button:hover
+              background-color: #fefefe
+              background-repeat: repeat-x
+              background-position: 0 bottom
+            &.button
+              +border-radius("15px")
+              +font-sans
+              background-image: url(/wp-content/themes/base/images/bg_fefefe_bdbdbd.png)
+              border: 1px solid #cacaca
+              color: #353535
+              display: inline-block
+              font-size: 14px
+              font-weight: bold
+              padding: 5px 30px
+              text-align: center
+              text-decoration: none
+              &:hover
+                background-image: url(/wp-content/themes/base/images/bg_f5f5f5_cbcbcb.png)
+                background-color: #f5f5f5
+                border: 1px solid #aaa
+    .details
+      // height: 400px

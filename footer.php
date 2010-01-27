@@ -7,7 +7,7 @@
   
     <div id="footer">
       <div class="inner">
-        <p><?php bloginfo('name'); ?> is proudly powered by <a href="http://wordpress.org/">WordPress <?php bloginfo('version'); ?></a> <a href="<?php bloginfo('rss2_url'); ?>">Entries (RSS)</a> <a href="<?php bloginfo('comments_rss2_url'); ?>">Comments (RSS)</a>. <!-- <?php echo get_num_queries(); ?> queries. <?php timer_stop(1); ?> seconds. --></p>
+        <p>Copyright 2005..2010 <a href="http://gethandcrafted.com/">Handcrafted</a>, All Rights Reserved.</p>
     		<?php wp_footer(); ?>
       </div>
     </div>

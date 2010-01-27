@@ -12,6 +12,13 @@
   border-bottom-color: #000
   color: #fff
 
+body.home #header #nav_main ul li.home,
+body.page-id-311 #header #nav_main ul li.pitch,
+body.page-id-33 #header #nav_main ul li.archives,
+body.page-id-2 #header #nav_main ul li.about
+  a
+    +current
+
 =nav_main
   #nav_main
     +font-sans
@@ -45,7 +52,3 @@
           width: 165px
           &.current, &:hover
             +current
-          &:active, &:focus
-            +active
-            &:hover
-              +active

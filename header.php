@@ -39,6 +39,15 @@
         <div id="nav_main">
           <div class="inner">
             <ul>
+              <li class="home"><a href="<?php bloginfo('url'); ?>">Home</a></li>
+              <li class="archives"><a href="<?php bloginfo('url'); ?>/?page_id=33">Archives</a></li>
+              <li class="about"><a href="<?php bloginfo('url'); ?>/?page_id=2">About</a></li>
+              <li class="pitch"><a href="<?php bloginfo('url'); ?>/?page_id=311">Pitch the Show</a></li>
+              <li class="schedule"><a href="<?php bloginfo('url'); ?>/schedule/">Schedule</a></li>
+              <li class="avertise"><a href="<?php bloginfo('url'); ?>/advertising/">Advertise</a></li>
+            </ul>
+            <!--
+            <ul>
               <li><a href="<?php bloginfo('url'); ?>" class="current">Home</a></li>
               <li><a href="<?php bloginfo('url'); ?>/archives/">Archives</a></li>
               <li><a href="<?php bloginfo('url'); ?>/about/">About</a></li>
@@ -46,6 +55,7 @@
               <li><a href="<?php bloginfo('url'); ?>/schedule/">Schedule</a></li>
               <li><a href="<?php bloginfo('url'); ?>/advertising/">Advertise</a></li>
             </ul>
+            -->
           </div>
         </div>
     </div>

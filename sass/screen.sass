@@ -13,12 +13,19 @@ body
 #footer
   background: #171717
   border-top: 4px solid #ccc
-  height: 250px
+  color: #888
+  font-size: 12px
+  padding: 45px 0
+  text-align: center
+  a
+    color: #fff
+    font-weight: bold
+    text-decoration: none
 
 #header
   +nav_main
   border-bottom: 1px solid #cacaca
-  margin-bottom: 45px
+  margin-bottom: 35px
   #branding
     background: #171717
     +gradient("linear", "0% 0%, 0% 70%", #333, #171717)
@@ -36,7 +43,7 @@ body
         width: 100%
 
 #body
-  +clearfix
+  +pie-clearfix
   margin-bottom: 25px
   #content
     +float-left
@@ -161,68 +168,7 @@ body.page-template-page-pitchtheshow-php #body #content
   +crunchbase
 
 #main
-  .pitch-the-show
-    .gist
-      border: 1px solid #d7d7d7
-      padding: 25px 0
-      .header
-        border-bottom: 1px solid #c1c1c1
-        margin: 0 auto
-        padding-bottom: 25px
-        margin-bottom: 25px
-        text-align: center
-        width: 870px
-        h1
-          font-size: 38px
-          font-weight: bold
-          line-height: 1
-          letter-spacing: -1px
-          margin-bottom: 20px
-        h2
-          background: url(/wp-content/themes/base/images/get_started_by_calling.png) no-repeat 50%
-          line-height: 31px
-          text-indent: -9999px
-      .body
-        +clearfix
-        .sidebar
-          +float-left
-          height: 400px
-          margin-left: 65px
-          padding-top: 25px
-          text-align: center
-          width: 300px
-          img
-            margin-bottom: 75px
-          h3
-            background: url(/wp-content/themes/base/images/power_by_grasshopper_text.png) no-repeat 50%
-            line-height: 129px
-            margin: 0 auto
-            text-indent: -9999px
-            width: 271px
-            a
-              display: block
-              height: 100%
-              width: 100%
-        .content
-          +float-right
-          margin-right: 65px
-          width: 520px
-          h2
-            font-size: 22px
-            font-weight: bold
-            margin-bottom: 10px
-            margin-top: 30px
-            &:first-child
-              margin-top: 0
-            &:last-child
-              margin-bottom: 0
-          p
-            +font-georgia
-            font-size: 16px
-            line-height: 1.5
-            margin-bottom: 18px
-            &:last-child
-              margin-bottom: 0
+  +pitch-the-show
   .page
     h1
       font-size: 24px
