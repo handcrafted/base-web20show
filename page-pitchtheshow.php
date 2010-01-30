@@ -39,20 +39,22 @@ Template Name: Pitch the Show
               <h2>What is Pitch the Show?</h2>
               <div class="column one">
                 <div class="inner">
+                  <a href="http://grasshopper.com/" alt="Powered by Grasshopper"><img src="<?php bloginfo("template_url"); ?>/images/powered_by_grasshopper_logo_250.png" class="grasshopper_logo" width="252" height="105" /></a>
                   <p>Pitch the Show is a new segment of the Web 2.0 Show, powered by Grasshopper, that gives anyone a chance to pitch their business for an opportunity to be featured on the show. All you need to do is call 1-888-WEB20SHOW and give us your best 90 second pitch about your business.</p>
+                  <p>Each month we will select only 2 pitches out of the many businesses that call in. These 2 businesses will be featured on a special monthly episode of the Web 2.0 Show and will get exposure to the listeners as well as special guests who have made their mark on the entrepreneurial world.</p>
                 </div>
               </div>
               <div class="column two">
                 <div class="inner">
-                  <p>Each month we will select only 2 pitches out of the many businesses that call in. These 2 businesses will be featured on a special monthly episode of the Web 2.0 Show and will get exposure to the listeners as well as special guests who have made their mark on the entrepreneurial world.</p>
+
                 </div>
               </div>
               <!-- <p><strong>So, what are you waiting for? May the Best Pitch Win!!
   </strong></p> -->
             </div>
-            <div class="logos">
+<!--             <div class="logos">
               <a href="http://grasshopper.com/" class="grasshopper_logo" alt="Powered by Grasshopper"><img src="<?php bloginfo("template_url"); ?>/images/powered_by_grasshopper_logo_250.png" width="252" height="105" /></a>
-            </div>
+            </div> -->
             <div class="columns questions">
               <div class="column one">
                 <div class="inner">
