@@ -12,7 +12,7 @@ body
   
 #footer
   background: #171717
-  border-top: 4px solid #ccc
+  border-top: 4px solid #cacaca
   color: #888
   font-size: 12px
   padding: 45px 0
@@ -24,8 +24,7 @@ body
 
 #header
   +nav_main
-  border-bottom: 1px solid #cacaca
-  margin-bottom: 35px
+  border-bottom: 1px solid #aaa
   #branding
     background: #171717
     +gradient("linear", "0% 0%, 0% 70%", #333, #171717)
@@ -41,10 +40,50 @@ body
         height: 100%
         position: absolute
         width: 100%
-
+#preamble
+  background: #ebebeb
+  border-bottom: 1px solid #cacaca
+  & > .inner
+    position: relative
+    height: 225px
+    margin: 0 auto
+    width: 810px
+  img.call_me
+    position: absolute
+    bottom: -21px
+    right: -16px
+    z-index: 20
+  h3
+    font-size: 28px
+    font-weight: bold
+    line-height: 1
+    letter-spacing: -1px
+    padding-top: 25px
+    margin-bottom: 10px
+  p
+    font-size: 15px
+    line-height: 1.8
+    margin-bottom: 20px
+    width: 585px
+    &:last-child
+      margin-bottom: 0
+  a.button
+    +border-radius("3px")
+    background-image: none
+    background-color: #B5111B
+    border: 1px solid #610000
+    color: #fff
+    font-size: 14px
+    font-weight: bold
+    line-height: 1
+    padding: 6px 16px
+    &:hover
+      background-image: none
+      border: 1px solid #380000
 #body
   +pie-clearfix
   margin-bottom: 25px
+  padding-top: 35px
   #content
     +float-left
     width: 575px
@@ -148,6 +187,7 @@ body.page-template-page-pitchtheshow-php #body #content
                   margin-bottom: 3px
                 &.data
                   font-size: 32px
+                  line-height: 1
             .tweetmeme_retweet
               padding-top: 20px
               text-align: center
@@ -202,10 +242,14 @@ body.page-template-page-pitchtheshow-php #body #content
   #respond
     display: none
   .post
-    +clearfix
+    +pie-clearfix
     border-bottom: 4px solid #e5e5e5
     margin-bottom: 25px
     padding-bottom: 25px
+    &:last-child
+      border-bottom: none
+      margin-bottom: 0
+      padding-bottom: 0
     .sidebar
       +float-left
       margin-top: 31px
@@ -218,16 +262,18 @@ body.page-template-page-pitchtheshow-php #body #content
           &.label
             font-size: 16px
             font-weight: normal
-            margin-bottom: 3px
           &.data
             font-size: 60px
+            line-height: 1
       .tweetmeme_retweet
-        padding-top: 20px
+        padding-top: 30px
         text-align: center
     .content
       +float-right
       width: 480px
       +audio_player
+      &.full
+        width: 100%
       p
         font-size: 14px
         line-height: 1.5

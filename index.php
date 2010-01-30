@@ -6,6 +6,19 @@
 
 get_header(); ?>
 
+<div id="preamble">
+  <div class="inner">
+    <h3>Would you like to be a guest on the show?</h3>
+    <p>
+      Here's your chance to be heard, get connected, and showcase your business to
+      <br />Adam Stacoviak, Siamak Taghaddos, David Hauser, Jonathan Kay and special guests.
+      <br />What are you waiting for? It's time to <strong>Pitch the Show</strong>!
+    </p>
+    <img src="http://grasshopper.com/img/global/about_gary.png" class="call_me" />
+    <p><a href="<?php bloginfo('url'); ?>/?page_id=311" class="button">Click here to learn more &rarr;</a></p>
+  </div>
+</div>
+
 <div id="body">
 
   <!-- start #content -->

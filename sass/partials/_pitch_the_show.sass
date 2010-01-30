@@ -1,35 +1,25 @@
+=pts-centered
+  margin: 0 auto
+  width: 870px
+
 =pitch-the-show
   .pitch-the-show
+    a
+      color: #006C32
+      text-decoration: none
+      &:hover
+        text-decoration: underline
     .gist
+      +border-radius("3px")
       // background: #fff url(/wp-content/themes/base/images/bg_ffffff_f1f1f1_vertical.png) repeat-x 0 bottom
       border: 1px solid #d7d7d7
-      padding: 25px 0 40px 0
+      padding: 25px 0 0 0
       position: relative
-      img
-        &.gary_corner
-          position: absolute
-          bottom: 0
-          left: -37px
-        &.speech_sliver
-          position: absolute
-          bottom: 90px
-          left: 145px
-          z-index: 20
-      .tweet_it
-        +border-radius("6px")
-        position: absolute
-        bottom: 115px
-        left: 110px
-        background: #f5f5f5 url(/wp-content/themes/base/images/gary_message.png) no-repeat 50%
-        border: 1px solid #d7d7d7
-        height: 150px
-        width: 260px
-        z-index: 30
       .header
-        border-bottom: 1px solid #c1c1c1
+        border-bottom: 1px solid #ccc
         margin: 0 auto
-        padding-bottom: 25px
-        margin-bottom: 25px
+        padding-bottom: 20px
+        margin-bottom: 20px
         text-align: center
         width: 870px
         h1
@@ -37,73 +27,181 @@
           font-weight: bold
           line-height: 1
           letter-spacing: -1px
-          margin-bottom: 20px
+          margin-bottom: 15px
         h2
           background: url(/wp-content/themes/base/images/get_started_by_calling.png) no-repeat 50%
           line-height: 31px
           text-indent: -9999px
       .body
-        +clearfix
-        .sidebar
-          +float-left
-          height: 400px
-          margin-left: 65px
-          padding-top: 25px
+        +font-georgia
+        .logos
+          +pts-centered
           text-align: center
-          width: 300px
-          img
-            margin-bottom: 75px
-          h3
-            background: url(/wp-content/themes/base/images/power_by_grasshopper_text.png) no-repeat 50%
-            line-height: 129px
-            margin: 0 auto
-            text-indent: -9999px
-            width: 271px
-            a
-              display: block
-              height: 100%
-              width: 100%
-        .content
-          +float-right
-          margin-right: 65px
-          width: 520px
+        .columns
+          +pts-centered
+          +pie-clearfix
+          h2, h3
+            color: #00853E
+            font-weight: normal
+            margin-bottom: 12px
           h2
-            font-size: 22px
+            font-size: 24px
+          h3
+            font-size: 20px
+          p
+            font-size: 15px
+            line-height: 1.5
+            margin-bottom: 15px
+            &:last-child
+              margin-bottom: 0
+          &.intro
+            padding-bottom: 15px
+            margin-bottom: 15px
+            h3
+              font-size: 18px
+              font-weight: bold
+              margin-bottom: 10px
+            p
+              font-size: 16px
+              line-height: 1.5
+            & > p
+              clear: both
+              padding-top: 25px
+              text-align: center
+            .column
+              &.one, &.two
+                +float-left
+                width: 435px
+              &.one .inner
+                padding-right: 15px
+              &.two .inner
+                padding-left: 15px
+          &.questions
+            padding: 0 0 15px 0
+            margin-top: 15px
+            margin-bottom: 15px
+            .column
+              & > .inner
+                padding: 12px
+              &.one, &.two, &.three
+                +float-left
+                width: 290px
+              &.one .inner
+                padding-left: 0
+              &.three .inner
+                padding-right: 0
+
+            ul
+              padding-left: 20px
+              li
+                font-size: 14px
+                line-height: 1.3
+                margin-bottom: 8px
+                &:last-child
+                  margin-bottom: 0
+      .outro
+        +pie-clearfix
+        position: relative
+        background: #E7F1E6
+        border-top: 3px solid #00853E
+        margin-top: 15px
+        padding-top: 35px
+        padding-bottom: 35px
+        img.gary_corner
+          position: absolute
+          bottom: 0
+          left: -37px
+        .tweet_message
+          +border-radius("10px")
+          position: absolute
+          bottom: 140px
+          left: 84px
+          background: #fff
+          border: 3px solid #d5e9d9
+          height: 115px
+          width: 385px
+          z-index: 20
+          & .inner
+            font-size: 18px
+            line-height: 1.6
+            padding-top: 15px
+            padding-left: 20px
+        .speech_sliver
+          position: absolute
+          bottom: 108px
+          left: 100px
+          background: url(/wp-content/themes/base/images/speech_sliver.png)
+          height: 35px
+          width: 61px
+          z-index: 30
+        a.tweet_this
+          +border-radius("3px")
+          +font-sans
+          +gradient("linear", "0% 0%, 0% 70%", #008C42, #03481D)
+          background-color: #03481D
+          border: 1px solid #022C12
+          position: absolute
+          bottom: 85px
+          left: 155px
+          color: #fff
+          font-size: 13px
+          font-weight: bold
+          line-height: 1
+          display: inline-block
+          padding: 8px 20px
+          text-transform: uppercase
+          &:hover
+            border: 1px solid #022C12
+            text-decoration: none
+        .columns
+          +float-right
+          margin-left: 65px
+          margin-right: 65px
+          width: 425px
+          text-align: right
+
+    .details
+      +font-georgia
+      height: 300px
+      margin-top: 30px
+      padding: 26px 0 0 0
+      position: relative
+      .columns
+        +pts-centered
+        +pie-clearfix
+        h2, h3
+          color: #00853E
+          font-weight: normal
+          margin-bottom: 12px
+        h2
+          font-size: 24px
+        h3
+          font-size: 20px
+        p
+          font-size: 15px
+          line-height: 1.5
+          margin-bottom: 15px
+          &:last-child
+            margin-bottom: 0
+        &.intro
+          padding-bottom: 15px
+          margin-bottom: 15px
+          h3
+            font-size: 18px
             font-weight: bold
             margin-bottom: 10px
-            margin-top: 30px
-            &:first-child
-              margin-top: 0
-            &:last-child
-              margin-bottom: 0
           p
-            +font-georgia
             font-size: 16px
             line-height: 1.5
-            margin-bottom: 18px
-            &:last-child
-              margin-bottom: 0
-          a
-            &.button,
-            &.button:hover
-              background-color: #fefefe
-              background-repeat: repeat-x
-              background-position: 0 bottom
-            &.button
-              +border-radius("15px")
-              +font-sans
-              background-image: url(/wp-content/themes/base/images/bg_fefefe_bdbdbd.png)
-              border: 1px solid #cacaca
-              color: #353535
-              display: inline-block
-              font-size: 14px
-              font-weight: bold
-              padding: 5px 30px
-              text-align: center
-              text-decoration: none
-              &:hover
-                background-image: url(/wp-content/themes/base/images/bg_f5f5f5_cbcbcb.png)
-                background-color: #f5f5f5
-                border: 1px solid #aaa
-    .details
-      // height: 400px
+          & > p
+            clear: both
+            padding-top: 25px
+            text-align: center
+          .column
+            &.one, &.two
+              +float-left
+              width: 435px
+            &.one .inner
+              padding-right: 15px
+            &.two .inner
+              padding-left: 15px
