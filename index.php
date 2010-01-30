@@ -40,6 +40,7 @@ get_header(); ?>
             <div class="tweetmeme_retweet">
               <script type="text/javascript">
                 tweetmeme_url = '<?php the_permalink() ?>';
+                tweetmeme_source = 'web20show';
               </script>
               <script type="text/javascript" src="http://tweetmeme.com/i/scripts/button.js"></script>
             </div>
