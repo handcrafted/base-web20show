@@ -40,7 +40,7 @@ Template Name: Pitch the Show
               <div class="column one">
                 <div class="inner">
                   <a href="http://grasshopper.com/" alt="Powered by Grasshopper"><img src="<?php bloginfo("template_url"); ?>/images/powered_by_grasshopper_logo_250.png" class="grasshopper_logo" width="252" height="105" /></a>
-                  <p>Pitch the Show is a new segment of the Web 2.0 Show, powered by Grasshopper, that gives anyone a chance to pitch their business for an opportunity to be featured on the show. All you need to do is call 1-888-WEB20SHOW and give us your best 90 second pitch about your business.</p>
+                  <p>Pitch the Show is a new segment of the Web 2.0 Show that gives anyone a chance to pitch their business for an opportunity to be featured on the show. All you need to do is call <strong>1-888-WEB20SHOW</strong> and give us your best 90 second pitch about your business.</p>
                   <p>Each month we will select only 2 pitches out of the many businesses that call in. These 2 businesses will be featured on a special monthly episode of the Web 2.0 Show and will get exposure to the listeners as well as special guests who have made their mark on the entrepreneurial world.</p>
                 </div>
               </div>
@@ -68,7 +68,7 @@ Template Name: Pitch the Show
                   <h3>How do I get involved?</h3>
                   <p>Read through the resources, jot down a few notes, thoughts, etc. Pick up the phone. Then pitch your heart out. </p>
                   <p>You can call as many times as it takes. You have <strong>90 seconds</strong> to show us your passion, professionalism, and buzzworthy-ness.</p>
-                  <p><strong>Don't forget</strong>, just like in real life or at a demo pit if you don't spark some interest right away we are moving on!</p>
+                  <p><strong>Important!</strong> Just like in real life or at a demo pit if you don't spark some interest right away we are moving on!</p>
                   <!-- <p>But most importantly, pick up the phone and call!</p> -->
                 </div>
               </div>

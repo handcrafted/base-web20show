@@ -42,7 +42,7 @@
     </div>
     <ul>
     	
-      <?php query_posts('category_name=podcast&posts_per_page=6&offset=5'); ?>
+      <?php query_posts('category_name=podcast&posts_per_page=5&offset=5'); ?>
     	<?php while (have_posts()) : the_post(); ?>
     	<li>
     		<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
