@@ -6,8 +6,8 @@
 
 =pitch-the-show
   .pitch-the-show
+    position: relative
     .tweetmeme_retweet
-      display: none
       position: absolute
       top: -22px
       left: 10px
@@ -44,6 +44,7 @@
         .logos
           +pts-centered
           text-align: center
+          margin-bottom: 15px
         .columns
           +pts-centered
           +pie-clearfix
@@ -105,9 +106,15 @@
           padding-bottom: 0
           text-align: right
           width: 435px
-          .column.one strong
-            color: #000
-            text-decoration: underline
+          .column.one
+            position: relative
+            strong
+              color: #000
+              text-decoration: underline
+            img.arrow
+              position: absolute
+              bottom: -14px
+              left: -128px
         img.gary_corner
           position: absolute
           bottom: 0
@@ -136,31 +143,27 @@
           width: 61px
           z-index: 30
         a.tweet_this
-          +border-radius("3px")
+          +border-radius("5px")
           +font-sans
-          +gradient("linear", "0% 0%, 0% 70%", #F00000, #790101)
-          background-color: #790101
-          border: 2px solid #5C0101
+          +gradient("linear", "0% 0%, 0% 70%", #fd0000, #790101)
+          background-color: #fd0000
           position: absolute
           bottom: 85px
-          left: 155px
+          left: 157px
           color: #fff
-          font-size: 13px
-          font-weight: bold
+          font-size: 16px
           line-height: 1
-          letter-spacing: 1px
           display: inline-block
-          padding: 8px 20px
-          text-transform: uppercase
+          padding: 10px 20px
           &:hover
-            background-image: none
-            border: 2px solid #3E0101
+            +gradient("linear", "0% 0%, 0% 70%", #bd0000, #3a0000)
+            background-color: #bd0000
             text-decoration: none
 
     .details
       +font-georgia
-      margin-top: 25px
-      padding: 20px 0 0 0
+      margin-top: 15px
+      padding-top: 15px
       position: relative
       h2, h3
         color = !gh_green
@@ -173,7 +176,7 @@
         font-weight: bold
         line-height: 1
         letter-spacing: -1px
-        margin-bottom: 8px
+        margin-bottom: 20px
       h3
         font-size: 20px
         font-weight: normal
@@ -186,34 +189,57 @@
       .columns
         .column
           &.one
-            +float-left
-            width: 575px
-          &.two
-            +float-right
-            width: 400px
-          &.one .inner
-            padding-right: 15px
-          &.two .inner
-            +border-radius("6px")
-            background: #efefef
-            height: 300px
-            padding: 20px 25px
-          &.one
-            ul
-              padding-left: 17px
-              li
-                margin-bottom: 10px
-                h4
+            margin-bottom: 30px
+            #judges
+              +pie-clearfix
+              .judge
+                +float-left
+                width: 250px
+                img
+                  +float-left
+                  margin-right: 10px
+                  width: 100px
+                h3, h4
                   +font-sans
-                  font-size: 16px
+                  color: #171717
+                  line-height: 1
+                h3
+                  clear: both
+                  font-size: 14px
                   font-weight: bold
-                  margin-bottom: 6px
+                  margin-bottom: 15px
+                  span
+                    font-weight: normal
+                  a
+                    font-size: 12px
+                p
+                  font-size: 15px
+                  line-height: 1.3
+                  margin-right: 25px
+                  margin-bottom: 8px
+                  &:last-child
+                    margin-bottom: 0
           &.two
-            h2
-              font-size: 18px
+            display: none
+            border-top: 1px solid #e7e7e7
+            margin-top: 30px
+            padding-top: 30px
+            ul
+              +pie-clearfix
+              li
+                +float-left
+                margin-bottom: 15px
+                width: 50%
+                p
+                  padding-right: 20px
 
-#people
+.tooltip
   display: none
-  background: #e1e1e1
-  border-top: 1px solid #aaa
-  height: 300px
+.qtip-content
+  .tooltip
+    p
+      font-size: 14px
+      line-height: 1.6
+      margin-bottom: 12px
+      &:last-child
+        margin-bottom: 0

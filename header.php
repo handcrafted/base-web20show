@@ -16,13 +16,15 @@
 		    <?php wp_title('-', true, 'right'); ?> <?php bloginfo('name'); ?>
       <?php } ?>
 		</title>
+	  <?php if ( is_home()) { ?>
+	    <meta name="description" content="The Web 2.0 Show is an audio-based podcast that profiles the Entrepreneurs, Businesses and Technologies of Web 2.0. The show is hosted by Adam Stacoviak and broadcasts weekly on Thursday’s by noon.">
+    <?php } ?>
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/print.css" type="text/css" media="print" />
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 		<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 		<?php wp_head(); ?>
 	</head>
-	
 	<body <?php body_class(); ?>>
     <div id="header">
         <div id="branding">
@@ -40,22 +42,12 @@
           <div class="inner">
             <ul>
               <li class="home"><a href="<?php bloginfo('url'); ?>">Home</a></li>
-              <li class="archives"><a href="<?php bloginfo('url'); ?>/?page_id=33">Archives</a></li>
-              <li class="about"><a href="<?php bloginfo('url'); ?>/?page_id=2">About</a></li>
-              <li class="pitch"><a href="<?php bloginfo('url'); ?>/?page_id=311">Pitch the Show</a></li>
+              <li class="pitch"><a href="<?php bloginfo('url'); ?>/pitch/">Pitch the Show</a></li>
+              <li class="archives"><a href="<?php bloginfo('url'); ?>/archives/">Archives</a></li>
+              <li class="about"><a href="<?php bloginfo('url'); ?>/about/">About</a></li>
               <li class="schedule"><a href="<?php bloginfo('url'); ?>/schedule/">Schedule</a></li>
-              <li class="avertise"><a href="<?php bloginfo('url'); ?>/advertising/">Advertise</a></li>
+              <li class="sponsor"><a href="<?php bloginfo('url'); ?>/sponsor/">Sponsor</a></li>
             </ul>
-            <!--
-            <ul>
-              <li><a href="<?php bloginfo('url'); ?>" class="current">Home</a></li>
-              <li><a href="<?php bloginfo('url'); ?>/archives/">Archives</a></li>
-              <li><a href="<?php bloginfo('url'); ?>/about/">About</a></li>
-              <li><a href="<?php bloginfo('url'); ?>/pitch/">Pitch the Show</a></li>
-              <li><a href="<?php bloginfo('url'); ?>/schedule/">Schedule</a></li>
-              <li><a href="<?php bloginfo('url'); ?>/advertising/">Advertise</a></li>
-            </ul>
-            -->
           </div>
         </div>
     </div>

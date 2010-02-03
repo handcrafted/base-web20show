@@ -10,12 +10,12 @@ get_header(); ?>
   <div class="inner">
     <h3>Would you like to be a guest on the show?</h3>
     <p>
-      Here's your chance to be heard, get connected, and showcase your business to
+      Here's your opportunity to get on the show, get heard and showcase your business to
       <br />Adam Stacoviak, Siamak Taghaddos, David Hauser, Jonathan Kay and special guests.
-      <br />What are you waiting for? It's time to <strong>Pitch the Show</strong>!
+      <br />What are you waiting for? It's time to <em>Pitch the Show</em>!
     </p>
     <img src="http://grasshopper.com/img/global/about_gary.png" class="call_me" />
-    <p><a href="<?php bloginfo('url'); ?>/?page_id=311" class="button">Click here to learn more &rarr;</a></p>
+    <p><a href="<?php bloginfo('url'); ?>/pitch/" class="button">Click here to learn more &rarr;</a></p>
   </div>
 </div>
 
@@ -27,7 +27,7 @@ get_header(); ?>
     <!-- start #main -->
     <div id="main">
 
-      <?php query_posts('category_name=podcast&posts_per_page=3'); ?>
+      <?php query_posts('category_name=podcast&posts_per_page=4'); ?>
 
     	<?php while (have_posts()) : the_post(); ?>
 

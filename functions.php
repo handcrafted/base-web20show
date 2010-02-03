@@ -14,6 +14,7 @@ function my_head() { ?>
   <link href='http://web20show.buzzsprout.com/podcasts/92/artworks_medium.png' rel='image_src' />
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript"></script>
   <script src="<?php bloginfo("template_url") ?>/javascript/jquery.livequery.js" type="text/javascript"></script>
+  <script src="<?php bloginfo("template_url") ?>/javascript/jquery.qtip-1.0.0-rc3.min.js" type="text/javascript"></script>
   <script src="<?php bloginfo("template_url") ?>/javascript/site.js" type="text/javascript"></script>
 <?php } add_action('wp_head', 'my_head');
 
