@@ -47,6 +47,7 @@ Template Name: Pitch the Show
                 </div>
               </div>
             </div>
+            <!--
             <div class="columns questions">
               <div class="column one">
                 <div class="inner">
@@ -58,7 +59,6 @@ Template Name: Pitch the Show
               <div class="column two">
                 <div class="inner">
                   <h3>How do I get involved?</h3>
-                  <!-- <p>Read through the resources, jot down a few notes, thoughts, etc. Pick up the phone, then pitch your heart out.</p> -->
                   <p>Get your pitch together and practice, practice, practice. Pick up the phone, then pitch your heart out!</p>
                   <p>You can call as many times as it takes. You have <em>90 seconds</em> to show us your passion, professionalism, and buzzworthy-ness.</p>
                   <p><strong>Important!</strong> Just like in real life or at a demo pit if you don't spark some interest right away we are moving on!</p>
@@ -72,6 +72,7 @@ Template Name: Pitch the Show
                 </div>
               </div>
             </div>
+            -->
             <div class="logos">
               <a href="http://grasshopper.com/" class="grasshopper_text"><img src="<?php bloginfo("template_url"); ?>/images/power_by_grasshopper_text_horizontal.png" alt="Powered by the Virtual Phone System Designed for Entrepreneurs" /></a>
             </div>
