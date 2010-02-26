@@ -8,7 +8,7 @@ get_header(); ?>
 
 <div id="preamble">
   <div class="inner">
-    <h3>Would you like to be a guest on the show?</h3>
+    <h3>Would you like to be featured on the show?</h3>
     <p>
       Here's your opportunity to get on the show, get heard and showcase your business to
       <br />Adam Stacoviak, Siamak Taghaddos, David Hauser, Jonathan Kay and special guests.

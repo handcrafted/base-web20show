@@ -47,7 +47,6 @@ Template Name: Pitch the Show
                 </div>
               </div>
             </div>
-            <!--
             <div class="columns questions">
               <div class="column one">
                 <div class="inner">
@@ -72,7 +71,6 @@ Template Name: Pitch the Show
                 </div>
               </div>
             </div>
-            -->
             <div class="logos">
               <a href="http://grasshopper.com/" class="grasshopper_text"><img src="<?php bloginfo("template_url"); ?>/images/power_by_grasshopper_text_horizontal.png" alt="Powered by the Virtual Phone System Designed for Entrepreneurs" /></a>
             </div>

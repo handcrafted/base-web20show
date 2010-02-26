@@ -8,7 +8,7 @@
   <div id="subscribe">
     <ul>
       <li class="label">Subscribe</li>
-      <li><a href="http://feeds.feedburner.com/web20Show" class="feed">RSS</a></li>
+      <li><a href="http://web20show.com/feed/" class="feed">RSS</a></li>
       <li><a href="http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewPodcast?id=79511655" class="itunes">iTunes</a></li>
       <li><a href="http://twitter.com/web20show" class="twitter">Twitter</a></li>
       <li><a href="http://www.facebook.com/pages/The-Web-20-Show/203485278504" class="facebook">Facebook</a></li>
@@ -31,6 +31,11 @@
       <li class="standard">
         <a href="http://thechangelog.com/">
           <img src="<?php bloginfo("template_url") ?>/images/thechangelog_logo.png" />
+        </a>
+      </li>
+      <li class="premium bottom">
+        <a href="http://www.web2expo.com/webexsf2010">
+          <img src="<?php bloginfo("template_url") ?>/images/web2expo_logo.png" />
         </a>
       </li>
     </ul>
