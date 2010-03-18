@@ -26,5 +26,18 @@
     pageTracker._trackPageview();
     } catch(err) {}</script>
 
+    <script src="http://cdn.survey.io/embed/1.0/survey.js" type="text/javascript"></script>
+    <script type="text/javascript" charset="utf-8">
+    Surveyio.init({
+    	survey_id: "a91fa",
+    	token: "99a50e2a2e4b9b38a57f33510c1e920753e53ab4",
+    	banner: {
+    		x: "right",
+    		y: "top",
+    		color: "green"
+    	}
+    });
+    </script>
+
 	</body>
 </html>

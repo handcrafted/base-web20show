@@ -27,7 +27,7 @@ get_header(); ?>
     <!-- start #main -->
     <div id="main">
 
-      <?php query_posts('category_name=podcast&posts_per_page=4'); ?>
+      <?php query_posts('category_name=podcast&posts_per_page=5'); ?>
 
     	<?php while (have_posts()) : the_post(); ?>
 

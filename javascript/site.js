@@ -8,8 +8,8 @@ $(document).ready(function() {
 		.attr('target', '_blank');
 
   $('#recently li:first-child').addClass('first');
-  $('#recently li:nth-child(6)').addClass('sixth');
-  $('body.home #main .post:nth-child(4)').addClass('fourth');
+  $('#recently li:nth-child(12)').addClass('sixth');
+  $('body.home #main .post:nth-child(5)').addClass('fourth');
   
   $('.judge img').each(function() {
     

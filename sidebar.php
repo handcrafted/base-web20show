@@ -33,9 +33,14 @@
           <img src="<?php bloginfo("template_url") ?>/images/thechangelog_logo.png" />
         </a>
       </li>
-      <li class="premium bottom">
+      <li class="premium">
         <a href="http://www.web2expo.com/webexsf2010">
           <img src="<?php bloginfo("template_url") ?>/images/web2expo_logo.png" />
+        </a>
+      </li>
+      <li class="premium bottom">
+        <a href="http://www.storenvy.com/">
+          <img src="<?php bloginfo("template_url") ?>/images/logo_storenvy_blue.png" />
         </a>
       </li>
     </ul>
@@ -47,7 +52,7 @@
     </div>
     <ul>
     	
-      <?php query_posts('category_name=podcast&posts_per_page=6&offset=4'); ?>
+      <?php query_posts('category_name=podcast&posts_per_page=12&offset=5'); ?>
     	<?php while (have_posts()) : the_post(); ?>
     	<li>
     		<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
