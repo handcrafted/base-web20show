@@ -23,6 +23,11 @@
           <img src="<?php bloginfo("template_url") ?>/images/grasshopper_logo.png" />
         </a>
       </li>
+      <li class="premium">
+        <a href="http://www.storenvy.com/">
+          <img src="<?php bloginfo("template_url") ?>/images/logo_storenvy_blue.png" />
+        </a>
+      </li>
       <li class="standard">
         <a href="http://newleaders.com/">
           <img src="<?php bloginfo("template_url") ?>/images/newleaders_logo.png" />
@@ -33,14 +38,9 @@
           <img src="<?php bloginfo("template_url") ?>/images/thechangelog_logo.png" />
         </a>
       </li>
-      <li class="premium">
+      <li class="premium bottom">
         <a href="http://www.web2expo.com/webexsf2010">
           <img src="<?php bloginfo("template_url") ?>/images/web2expo_logo.png" />
-        </a>
-      </li>
-      <li class="premium bottom">
-        <a href="http://www.storenvy.com/">
-          <img src="<?php bloginfo("template_url") ?>/images/logo_storenvy_blue.png" />
         </a>
       </li>
     </ul>
